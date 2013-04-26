@@ -1,4 +1,0 @@
-D:\0Work\RestartChecks\RestartChecks\bin\Debug\RestartChecks.exe
-D:\0Work\RestartChecks\RestartChecks\bin\Debug\RestartChecks.pdb
-D:\0Work\RestartChecks\RestartChecks\obj\x86\Debug\RestartChecks.exe
-D:\0Work\RestartChecks\RestartChecks\obj\x86\Debug\RestartChecks.pdb
