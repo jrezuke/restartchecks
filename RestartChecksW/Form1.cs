@@ -1,13 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Configuration;
-using System.Data;
 using System.Diagnostics;
-using System.Drawing;
 using System.IO;
 using System.Linq;
-using System.Text;
 using System.Windows.Forms;
 
 namespace RestartChecksW
@@ -29,14 +23,14 @@ namespace RestartChecksW
         {
             listBox2.DisplayMember = "Name";
             listBox2.ValueMember = "FullName";
-            GetAllExcelProcesses();
+            KillAllExcelProcesses();
             GetAllChecksFiles();
         }
 
         private void GetAllChecksFiles()
         {
-            var path = ConfigurationManager.AppSettings["ChecksPath"].ToString();
-            
+            const string path = @"C:\Halfpint";
+
             if (Directory.Exists(path))
             {
                 var di = new DirectoryInfo(path);
@@ -52,30 +46,17 @@ namespace RestartChecksW
                     listBox2.Items.Add(fi);
                 }
             }
-
         }
 
-        private void GetAllExcelProcesses()
-        {
-            listBox1.Items.Clear();
-            var excelProcesses = Process.GetProcessesByName(processName: "Excel");
-            foreach (var excelProcess in excelProcesses)
-            {
-                listBox1.Items.Add(excelProcess.MainWindowTitle);
-            }
-        }
-
-        private void btnEndProcess_Click(object sender, EventArgs e)
+        private void KillAllExcelProcesses()
         {
             var excelProcesses = Process.GetProcessesByName(processName: "Excel");
             foreach (var excelProcess in excelProcesses)
             {
                 excelProcess.Kill();
-                listBox1.Items.Remove(excelProcess.MainWindowTitle);
             }
-            GetAllExcelProcesses();
         }
-
+       
         private void btnExit_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -83,19 +64,19 @@ namespace RestartChecksW
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (listBox2.SelectedValue == null)
+            if (listBox2.SelectedItem == null)
             {
-                MessageBox.Show("Select a CHECKS file to restart!");
+                MessageBox.Show("Select a subject to restart!");
                 return;
             }
 
-            //string fileName = listBox2.SelectedValue.ToString();
-            //Process.Start("Excel.exe", fileName);
+            string fileName = ((FileInfo)listBox2.SelectedItem).FullName;
+            Process.Start("Excel.exe", fileName);
         }
     }
 
-    public class ExcelProcess
-    {
-        public string Name { get; set; }
-    }
+    //public class ExcelProcess
+    //{
+    //    public string Name { get; set; }
+    //}
 }
