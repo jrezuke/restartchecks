@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Diagnostics;
+using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Windows.Forms;
@@ -12,6 +13,7 @@ namespace RestartChecksW
         {
             //listBox1.DisplayMember = "MainWindowTitle";
             InitializeComponent();
+            this.Icon = RestartChecksW.Properties.Resources.restart;
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -72,6 +74,11 @@ namespace RestartChecksW
 
             string fileName = ((FileInfo)listBox2.SelectedItem).FullName;
             Process.Start("Excel.exe", fileName);
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 
