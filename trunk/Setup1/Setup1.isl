@@ -3862,7 +3862,7 @@
 		<row><td>ID_STRING1</td><td>1033</td><td/><td>0</td><td/><td>-501131695</td></row>
 		<row><td>ID_STRING2</td><td>1033</td><td>http://www.Halfpintstudy.org</td><td>0</td><td/><td>-501131663</td></row>
 		<row><td>ID_STRING3</td><td>1033</td><td>HalfPint</td><td>0</td><td/><td>-501103023</td></row>
-		<row><td>ID_STRING4</td><td>1033</td><td>RESTAR~1|Restart Checks</td><td>0</td><td/><td>-501146862</td></row>
+		<row><td>ID_STRING4</td><td>1033</td><td>CHECKS~1|CHECKS Restart</td><td>0</td><td/><td>-366929815</td></row>
 		<row><td>IIDS_UITEXT_FeatureUninstalled</td><td>1033</td><td>This feature will remain uninstalled.</td><td>0</td><td/><td>-501133743</td></row>
 	</table>
 
