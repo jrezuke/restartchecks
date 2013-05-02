@@ -44,7 +44,8 @@ namespace RestartChecksW
                 {
                     if (fi.Extension != ".xlsm")
                         continue;
-                    
+                    if (fi.Name.StartsWith("~"))
+                        continue;
                     listBox2.Items.Add(fi);
                 }
             }
@@ -74,6 +75,7 @@ namespace RestartChecksW
 
             string fileName = ((FileInfo)listBox2.SelectedItem).FullName;
             Process.Start("Excel.exe", fileName);
+            Application.Exit();
         }
 
         private void label2_Click(object sender, EventArgs e)
