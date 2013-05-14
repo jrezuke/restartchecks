@@ -7,11 +7,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RestartChecksW", "RestartCh
 EndProject
 Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "RestartChecksSetup", "RestartChecksSetup\RestartChecksSetup.vdproj", "{A5F4DDC8-E555-4976-A671-C90726678129}"
 EndProject
-Project("{6141683F-8A12-4E36-9623-2EB02B2C2303}") = "Setup1", "Setup1\Setup1.isproj", "{C7E291DA-597D-4838-ADEC-6F824B57F284}"
-	ProjectSection(ProjectDependencies) = postProject
-		{9AC45F65-679A-4A8D-B68F-BCFA063AF408} = {9AC45F65-679A-4A8D-B68F-BCFA063AF408}
-	EndProjectSection
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		CD_ROM|x86 = CD_ROM|x86
@@ -49,16 +44,6 @@ Global
 		{A5F4DDC8-E555-4976-A671-C90726678129}.Release|x86.ActiveCfg = Release
 		{A5F4DDC8-E555-4976-A671-C90726678129}.SingleImage|x86.ActiveCfg = Release
 		{A5F4DDC8-E555-4976-A671-C90726678129}.SingleImage|x86.Build.0 = Release
-		{C7E291DA-597D-4838-ADEC-6F824B57F284}.CD_ROM|x86.ActiveCfg = CD_ROM
-		{C7E291DA-597D-4838-ADEC-6F824B57F284}.CD_ROM|x86.Build.0 = CD_ROM
-		{C7E291DA-597D-4838-ADEC-6F824B57F284}.Debug|x86.ActiveCfg = DVD-5
-		{C7E291DA-597D-4838-ADEC-6F824B57F284}.Debug|x86.Build.0 = DVD-5
-		{C7E291DA-597D-4838-ADEC-6F824B57F284}.DVD-5|x86.ActiveCfg = DVD-5
-		{C7E291DA-597D-4838-ADEC-6F824B57F284}.DVD-5|x86.Build.0 = DVD-5
-		{C7E291DA-597D-4838-ADEC-6F824B57F284}.Release|x86.ActiveCfg = SingleImage
-		{C7E291DA-597D-4838-ADEC-6F824B57F284}.Release|x86.Build.0 = SingleImage
-		{C7E291DA-597D-4838-ADEC-6F824B57F284}.SingleImage|x86.ActiveCfg = SingleImage
-		{C7E291DA-597D-4838-ADEC-6F824B57F284}.SingleImage|x86.Build.0 = SingleImage
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
