@@ -165,19 +165,30 @@
             "{1525181F-901A-416C-8A58-119130FE478E}:_173054B2F4D343729198FCE8338F390A"
             {
             "Name" = "8:#1919"
-            "AlwaysCreate" = "11:FALSE"
+            "AlwaysCreate" = "11:TRUE"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Property" = "8:ProgramMenuFolder"
                 "Folders"
                 {
+                    "{9EF0B969-E518-4E46-987F-47570745A589}:_A524D76210FF4EF59B161B7E318B7124"
+                    {
+                    "Name" = "8:Halfpint"
+                    "AlwaysCreate" = "11:FALSE"
+                    "Condition" = "8:"
+                    "Transitive" = "11:FALSE"
+                    "Property" = "8:_47BD508F488E40989182660B72E42426"
+                        "Folders"
+                        {
+                        }
+                    }
                 }
             }
             "{3C67513D-01DD-4637-8A68-80971EB9504F}:_2860CF3A18FF4F3B863F358F899890C0"
             {
             "DefaultLocation" = "8:[ProgramFilesFolder]\\HalfpintStudy\\[ProductName]"
             "Name" = "8:#1925"
-            "AlwaysCreate" = "11:FALSE"
+            "AlwaysCreate" = "11:TRUE"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Property" = "8:TARGETDIR"
@@ -188,7 +199,7 @@
             "{1525181F-901A-416C-8A58-119130FE478E}:_3892719AD1934E22BF76F20BEF507B8A"
             {
             "Name" = "8:#1916"
-            "AlwaysCreate" = "11:FALSE"
+            "AlwaysCreate" = "11:TRUE"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Property" = "8:DesktopFolder"
@@ -333,6 +344,20 @@
         }
         "Shortcut"
         {
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_22952DDFAA6D4FBA86E0BCCF0FBFA7FF"
+            {
+            "Name" = "8:Restart Checks"
+            "Arguments" = "8:"
+            "Description" = "8:"
+            "ShowCmd" = "3:1"
+            "IconIndex" = "3:0"
+            "Transitive" = "11:FALSE"
+            "Target" = "8:_2C9B85E420EE46F3AFFD17E0DEBDD14C"
+            "Folder" = "8:_A524D76210FF4EF59B161B7E318B7124"
+            "WorkingFolder" = "8:_2860CF3A18FF4F3B863F358F899890C0"
+            "Icon" = "8:_68490F987E7541F097EA3C9806787843"
+            "Feature" = "8:"
+            }
             "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_BA4EDE06DA2B43679F0A7DED747834A2"
             {
             "Name" = "8:Restart Checks"
@@ -748,7 +773,7 @@
         {
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_2C9B85E420EE46F3AFFD17E0DEBDD14C"
             {
-            "SourcePath" = "8:..\\RestartChecksW\\obj\\x86\\Release\\RestartChecksW.exe"
+            "SourcePath" = "8:..\\RestartChecksW\\obj\\x86\\Debug\\RestartChecksW.exe"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_2860CF3A18FF4F3B863F358F899890C0"
