@@ -1,0 +1,1 @@
+Kill CHECKS process and re-start latest CHECKS
