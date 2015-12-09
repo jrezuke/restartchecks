@@ -45,10 +45,10 @@
             this.label2.Location = new System.Drawing.Point(9, 105);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(164, 20);
+            this.label2.Size = new System.Drawing.Size(306, 20);
             this.label2.TabIndex = 3;
-            this.label2.Text = "List of recent subjects";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
+            this.label2.Text = "List of recent subjects and last saved date";
+            
             // 
             // listBox2
             // 
@@ -58,7 +58,7 @@
             this.listBox2.Location = new System.Drawing.Point(11, 130);
             this.listBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.listBox2.Name = "listBox2";
-            this.listBox2.Size = new System.Drawing.Size(371, 164);
+            this.listBox2.Size = new System.Drawing.Size(438, 164);
             this.listBox2.TabIndex = 4;
             // 
             // button1
@@ -111,7 +111,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(653, 88);
+            this.panel1.Size = new System.Drawing.Size(720, 88);
             this.panel1.TabIndex = 7;
             // 
             // panel2
@@ -119,7 +119,7 @@
             this.panel2.Controls.Add(this.button1);
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.label1);
-            this.panel2.Location = new System.Drawing.Point(389, 130);
+            this.panel2.Location = new System.Drawing.Point(456, 130);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(264, 164);
             this.panel2.TabIndex = 10;
@@ -130,7 +130,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SkyBlue;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.ClientSize = new System.Drawing.Size(653, 365);
+            this.ClientSize = new System.Drawing.Size(720, 365);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnExit);
