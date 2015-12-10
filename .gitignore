@@ -1,0 +1,10 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/RestartChecks/bin/Debug
+/RestartChecks/obj/x86/Debug
+/RestartChecksSetup/Debug
+/RestartChecksW/bin/Debug
+/RestartChecksW/obj/x86/Debug
+*.suo

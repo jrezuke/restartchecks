@@ -40,7 +40,7 @@ namespace RestartChecksW
                 var di = new DirectoryInfo(path);
 
                 FileInfo[] fis = di.GetFiles();
-                var orderedFis = fis.OrderBy(f => f.CreationTime).Reverse();
+                var orderedFis = fis.OrderBy(f => f.LastWriteTime).Reverse();
 
                 foreach (var fi in orderedFis)
                 {
@@ -48,7 +48,7 @@ namespace RestartChecksW
                         continue;
                     if (fi.Name.StartsWith("~"))
                         continue;
-                    listBox2.Items.Add(fi.Name + " " + fi.LastWriteTime);
+                    listBox2.Items.Add(fi.Name + " (" + fi.LastWriteTime +")");
                 }
             }
         }
@@ -79,7 +79,9 @@ namespace RestartChecksW
             //var splits = selected.Split(' ');
             var pos = selected.IndexOf(' ');
             var filename = selected.Substring(0, pos);
-            var date = DateTime.Parse(selected.Substring(pos+1));
+            var datePart = selected.Substring(pos + 2).Replace(")","");
+            
+            var date = DateTime.Parse(datePart);
             string fullName = GetFilenameFromSelected(filename, date);
 
             Process.Start("Excel.exe", fullName);
@@ -95,19 +97,18 @@ namespace RestartChecksW
                 var di = new DirectoryInfo(path);
 
                 FileInfo[] fis = di.GetFiles();
-                var orderedFis = fis.OrderBy(f => f.CreationTime).Reverse();
+                var orderedFis = fis.OrderBy(f => f.LastWriteTime).Reverse();
 
                 foreach (var fi in orderedFis)
                 {
-                    TimeSpan diff;
                     if (fi.Extension != ".xlsm")
                         continue;
                     if (fi.Name.StartsWith("~"))
                         continue;
                     if (fi.Name == fileName )
                     {
-                       diff = fi.LastWriteTime - date;
-                       if(diff.Days == 0 && diff.Hours ==0 && diff.Minutes==0 && diff.Seconds == 0) 
+                        var diff = fi.LastWriteTime - date;
+                        if(diff.Days == 0 && diff.Hours ==0 && diff.Minutes==0 && diff.Seconds == 0) 
                             return fi.FullName;
                     }
                 }
